@@ -1,45 +1,101 @@
+/* Reseta os estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo a aparência do corpo do site */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
     height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom, #242424, #0d0d0d);
 }
 
+/* Container central */
 .container {
     background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 12px;
+    padding: 25px;
     text-align: center;
-    width: 300px;
-    max-width: 80%;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-.sub-title{
+/* Título principal */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #adc7ad;
+    margin-bottom: 15px;
+}
+
+/* Subtítulo */
+.sub-title {
+    font-size: 16px;
+    color: #bbbbbb;
     margin-bottom: 30px;
 }
 
-.profile{
-    width: 100px;
-    height: 100px;
+/* Estilo da imagem de perfil */
+.profile {
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #adc7ad;
+    border: 4px solid #adc7ad;
+    margin-bottom: 15px;
 }
 
+/* Estilo dos links para redes sociais */
 .link {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 20px 0;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 15px 0;
     text-decoration: none;
-    p{
-        color: #ffffff;
+    background-color: #242424;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Icone e texto do link */
+.link img {
+    margin-right: 10px;
+}
+
+.link p {
+    color: #f0f0f0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Efeito de hover no link */
+.link:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
     }
-    background-color: #121212;
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .sub-title {
+        font-size: 15px;
+    }
 }
